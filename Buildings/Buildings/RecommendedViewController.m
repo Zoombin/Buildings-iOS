@@ -27,7 +27,7 @@
 	_webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
 	_webView.delegate = self;
 	[self.view addSubview:_webView];
-	[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", WEB_HOST, @"tuijian.html"]]]];
+	[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@", WEB_HOST, @"tuijian.html", PARAMETERS]]]];
 	
 //	[WebViewJavascriptBridge enableLogging];
 //	_bridge = [WebViewJavascriptBridge bridgeForWebView:_webView webViewDelegate:self handler:^(id data, WVJBResponseCallback responseCallback) {

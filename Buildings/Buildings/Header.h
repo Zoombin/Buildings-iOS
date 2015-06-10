@@ -14,6 +14,7 @@
 //#define WEB_HOST @"http://127.0.0.1/html/"
 #define APP_SCHEME @"XXBuildings"
 #define OPEN_CONTACTS @"openContacts"
+#define PARAMETERS @"?id=9d79a67e96d643789612d267495a7ab8&login=1&type=1&dtype&ios"
 
 
 #endif

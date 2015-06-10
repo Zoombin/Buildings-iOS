@@ -31,7 +31,7 @@
 	_webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
 	_webView.delegate = self;
 	[self.view addSubview:_webView];
-	[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", WEB_HOST, @"share/building_detail.html"]]]];
+	[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@", WEB_HOST, @"share/building_detail.html", PARAMETERS]]]];
 }
 
 - (void)didReceiveMemoryWarning {
