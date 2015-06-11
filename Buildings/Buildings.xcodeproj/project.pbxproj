@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7780EAEC1B28FBF2006D9C41 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7780EAEB1B28FBF2006D9C41 /* ShareViewController.m */; };
+		77BCAA031B29CAE2002DB2D3 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BCAA021B29CAE2002DB2D3 /* SettingsViewController.m */; };
 		77D170391B2878DA004AF040 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D170381B2878DA004AF040 /* main.m */; };
 		77D1703C1B2878DA004AF040 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D1703B1B2878DA004AF040 /* AppDelegate.m */; };
 		77D170471B2878DA004AF040 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77D170461B2878DA004AF040 /* Images.xcassets */; };
@@ -33,6 +34,8 @@
 /* Begin PBXFileReference section */
 		7780EAEA1B28FBF2006D9C41 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
 		7780EAEB1B28FBF2006D9C41 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		77BCAA011B29CAE2002DB2D3 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		77BCAA021B29CAE2002DB2D3 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		77D170331B2878DA004AF040 /* Buildings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Buildings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D170371B2878DA004AF040 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77D170381B2878DA004AF040 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -106,6 +109,8 @@
 				77D170671B288DBE004AF040 /* ContactsSimulatorViewController.m */,
 				7780EAEA1B28FBF2006D9C41 /* ShareViewController.h */,
 				7780EAEB1B28FBF2006D9C41 /* ShareViewController.m */,
+				77BCAA011B29CAE2002DB2D3 /* SettingsViewController.h */,
+				77BCAA021B29CAE2002DB2D3 /* SettingsViewController.m */,
 				77D170461B2878DA004AF040 /* Images.xcassets */,
 				77D170481B2878DA004AF040 /* LaunchScreen.xib */,
 				77D170361B2878DA004AF040 /* Supporting Files */,
@@ -253,6 +258,7 @@
 				77D170681B288DBE004AF040 /* ContactsSimulatorViewController.m in Sources */,
 				77D1706E1B289A67004AF040 /* WebViewJavascriptBridge.m in Sources */,
 				77D170651B287CA4004AF040 /* MeViewController.m in Sources */,
+				77BCAA031B29CAE2002DB2D3 /* SettingsViewController.m in Sources */,
 				77D1703C1B2878DA004AF040 /* AppDelegate.m in Sources */,
 				7780EAEC1B28FBF2006D9C41 /* ShareViewController.m in Sources */,
 				77D170621B287C95004AF040 /* RecommendedViewController.m in Sources */,

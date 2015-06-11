@@ -8,6 +8,7 @@
 
 #import "MeViewController.h"
 #import "Header.h"
+#import "SettingsViewController.h"
 
 @interface MeViewController () <UIWebViewDelegate>
 
@@ -32,11 +33,18 @@
 	_webView.delegate = self;
 	[self.view addSubview:_webView];
 	[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@", WEB_HOST, @"mine/index.html", PARAMETERS]]]];
+	
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(settings)];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)settings {
+	SettingsViewController *settingsViewController = [[SettingsViewController alloc] initWithNibName:nil bundle:nil];
+	[self.navigationController pushViewController:settingsViewController animated:YES];
 }
 
 #pragma mark - UIWebViewDelegate
