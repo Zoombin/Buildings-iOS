@@ -17,8 +17,6 @@
 		77D170621B287C95004AF040 /* RecommendedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D170611B287C95004AF040 /* RecommendedViewController.m */; };
 		77D170651B287CA4004AF040 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D170641B287CA4004AF040 /* MeViewController.m */; };
 		77D170681B288DBE004AF040 /* ContactsSimulatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D170671B288DBE004AF040 /* ContactsSimulatorViewController.m */; };
-		77D1706D1B289A67004AF040 /* WebViewJavascriptBridge.js.txt in Resources */ = {isa = PBXBuildFile; fileRef = 77D1706B1B289A67004AF040 /* WebViewJavascriptBridge.js.txt */; };
-		77D1706E1B289A67004AF040 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D1706C1B289A67004AF040 /* WebViewJavascriptBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,9 +51,6 @@
 		77D170641B287CA4004AF040 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
 		77D170661B288DBE004AF040 /* ContactsSimulatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsSimulatorViewController.h; sourceTree = "<group>"; };
 		77D170671B288DBE004AF040 /* ContactsSimulatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsSimulatorViewController.m; sourceTree = "<group>"; };
-		77D1706A1B289A67004AF040 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
-		77D1706B1B289A67004AF040 /* WebViewJavascriptBridge.js.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WebViewJavascriptBridge.js.txt; sourceTree = "<group>"; };
-		77D1706C1B289A67004AF040 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +74,6 @@
 		77D1702A1B2878D9004AF040 = {
 			isa = PBXGroup;
 			children = (
-				77D170691B289A67004AF040 /* WebViewJavascriptBridge */,
 				77D170351B2878DA004AF040 /* Buildings */,
 				77D170521B2878DA004AF040 /* BuildingsTests */,
 				77D170341B2878DA004AF040 /* Products */,
@@ -142,17 +136,6 @@
 				77D170541B2878DA004AF040 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		77D170691B289A67004AF040 /* WebViewJavascriptBridge */ = {
-			isa = PBXGroup;
-			children = (
-				77D1706A1B289A67004AF040 /* WebViewJavascriptBridge.h */,
-				77D1706B1B289A67004AF040 /* WebViewJavascriptBridge.js.txt */,
-				77D1706C1B289A67004AF040 /* WebViewJavascriptBridge.m */,
-			);
-			name = WebViewJavascriptBridge;
-			path = Buildings/WebViewJavascriptBridge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +220,6 @@
 			files = (
 				77D1704A1B2878DA004AF040 /* LaunchScreen.xib in Resources */,
 				77D170471B2878DA004AF040 /* Images.xcassets in Resources */,
-				77D1706D1B289A67004AF040 /* WebViewJavascriptBridge.js.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +238,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				77D170681B288DBE004AF040 /* ContactsSimulatorViewController.m in Sources */,
-				77D1706E1B289A67004AF040 /* WebViewJavascriptBridge.m in Sources */,
 				77D170651B287CA4004AF040 /* MeViewController.m in Sources */,
 				77BCAA031B29CAE2002DB2D3 /* SettingsViewController.m in Sources */,
 				77D1703C1B2878DA004AF040 /* AppDelegate.m in Sources */,
