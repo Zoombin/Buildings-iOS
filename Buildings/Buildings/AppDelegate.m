@@ -29,8 +29,8 @@
 	MeViewController *meViewController = [[MeViewController alloc] initWithNibName:nil bundle:nil];
 	[controllers addObject:[[UINavigationController alloc] initWithRootViewController:meViewController]];
 	
-	ShareViewController *shareViewController = [[ShareViewController alloc] initWithNibName:nil bundle:nil];
-	[controllers addObject:[[UINavigationController alloc] initWithRootViewController:shareViewController]];
+//	ShareViewController *shareViewController = [[ShareViewController alloc] initWithNibName:nil bundle:nil];
+//	[controllers addObject:[[UINavigationController alloc] initWithRootViewController:shareViewController]];
 	
 	UITabBarController *tabBarController = [[UITabBarController alloc] initWithNibName:nil bundle:nil];
 	tabBarController.viewControllers = controllers;
