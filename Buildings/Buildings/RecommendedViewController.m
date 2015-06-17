@@ -27,6 +27,9 @@
 	[self.view addSubview:_webView];
 	[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@", WEB_HOST, @"tuijian.html", PARAMETERS]]]];
 	
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"测试" style:UIBarButtonItemStylePlain target:self action:@selector(test)];
+	
+	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openContacts) name:OPEN_CONTACTS object:nil];
 }
 
@@ -45,10 +48,25 @@
 	[self presentViewController:[[UINavigationController alloc] initWithRootViewController:controller] animated:YES completion:nil];
 }
 
+- (void)test {
+	NSString *name = @"张三";
+	NSString *phone = @"18662606288";
+	NSString *string = [NSString stringWithFormat:@"BrokerWeb.setFromContact('%@', '%@')", name, phone];
+	[_webView stringByEvaluatingJavaScriptFromString:string];
+	
+	string = [NSString stringWithFormat:@"BrokerWeb.setCity('%@', '%@')", name, phone];
+	NSLog(@"string: %@", string);
+	[_webView stringByEvaluatingJavaScriptFromString:string];
+}
+
 #pragma mark - ContactsSimulatorViewControllerDelegate
 
 - (void)didSelectContactWithName:(NSString *)name phone:(NSString *)phone {
 	NSString *string = [NSString stringWithFormat:@"BrokerWeb.setFromContact('%@', '%@')", name, phone];
+	[_webView stringByEvaluatingJavaScriptFromString:string];
+	
+	string = [NSString stringWithFormat:@"BrokerWeb.setCity('%@', '%@')", name, @"a38c542ddaf94a32b20160e949792b4b"];
+	NSLog(@"string: %@", string);
 	[_webView stringByEvaluatingJavaScriptFromString:string];
 }
 

@@ -22,6 +22,7 @@
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	if (self) {
 		self.title = @"我的";
+		self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(settings)];
 	}
 	return self;
 }
@@ -33,8 +34,6 @@
 	_webView.delegate = self;
 	[self.view addSubview:_webView];
 	[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@", WEB_HOST, @"mine/index.html", PARAMETERS]]]];
-	
-	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(settings)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,11 +49,11 @@
 #pragma mark - UIWebViewDelegate
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-	if ([_webView canGoBack]) {
-		self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:_webView action:@selector(goBack)];
-	} else {
-		self.navigationItem.leftBarButtonItem = nil;
-	}
+//	if ([_webView canGoBack]) {
+//		self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:_webView action:@selector(goBack)];
+//	} else {
+//		self.navigationItem.leftBarButtonItem = nil;
+//	}
 }
 
 @end
