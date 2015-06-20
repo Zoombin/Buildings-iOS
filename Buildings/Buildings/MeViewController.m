@@ -33,7 +33,7 @@
 	_webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
 	_webView.delegate = self;
 	[self.view addSubview:_webView];
-	[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@", WEB_HOST, @"mine/index.html", PARAMETERS]]]];
+	[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@", WEB_HOST, @"mine/setting_edit.html", PARAMETERS]]]];
 }
 
 - (void)didReceiveMemoryWarning {

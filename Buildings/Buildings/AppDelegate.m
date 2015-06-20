@@ -22,12 +22,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	
 	NSMutableArray *controllers = [NSMutableArray array];
-	
-	RecommendedViewController *recommendedViewController = [[RecommendedViewController alloc] initWithNibName:nil bundle:nil];
-	[controllers addObject:[[UINavigationController alloc] initWithRootViewController:recommendedViewController]];
-	
+
 	MeViewController *meViewController = [[MeViewController alloc] initWithNibName:nil bundle:nil];
 	[controllers addObject:[[UINavigationController alloc] initWithRootViewController:meViewController]];
+
+	RecommendedViewController *recommendedViewController = [[RecommendedViewController alloc] initWithNibName:nil bundle:nil];
+	[controllers addObject:[[UINavigationController alloc] initWithRootViewController:recommendedViewController]];
 	
 //	ShareViewController *shareViewController = [[ShareViewController alloc] initWithNibName:nil bundle:nil];
 //	[controllers addObject:[[UINavigationController alloc] initWithRootViewController:shareViewController]];

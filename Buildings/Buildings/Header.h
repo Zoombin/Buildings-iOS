@@ -14,7 +14,7 @@
 #define WEB_HOST @"http://127.0.0.1/Buildings-Web/html/"
 #define APP_SCHEME @"xcfcaddress"
 #define OPEN_CONTACTS @"openContacts"
-#define PARAMETERS @"?id=9d79a67e96d643789612d267495a7ab8&login=1&type=1&dtype&ios"
+#define PARAMETERS @"?id=4b2e3e67c167487ca24a49feefc15a8f&login=1&type=1&dtype&ios&tel=15295619370&a=nickname&nickname=zhangbin"
 
 
 #endif
