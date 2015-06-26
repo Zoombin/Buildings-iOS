@@ -18,19 +18,29 @@
 
 @implementation RecommendedViewController
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+	if (self) {
+		self.title = @"推荐";
+		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"测试" style:UIBarButtonItemStylePlain target:self action:@selector(test)];
+		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStylePlain target:self action:@selector(reload)];
+	}
+	return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.title = @"推荐";
 	
 	_webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
 	_webView.delegate = self;
 	[self.view addSubview:_webView];
-	[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@", WEB_HOST, @"tuijian.html", PARAMETERS]]]];
 	
-	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"测试" style:UIBarButtonItemStylePlain target:self action:@selector(test)];
+	NSString *path = [NSString stringWithFormat:@"%@%@%@", WEB_HOST, @"mine/customers.html", PARAMETERS];
+	[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:path]]];
+	NSLog(@"%@", path);
+
 	
-	
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openContacts) name:OPEN_CONTACTS object:nil];
+//	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openContacts) name:OPEN_CONTACTS object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,6 +67,10 @@
 	string = [NSString stringWithFormat:@"BrokerWeb.setCity('%@', '%@')", name, phone];
 	NSLog(@"string: %@", string);
 	[_webView stringByEvaluatingJavaScriptFromString:string];
+}
+
+- (void)reload {
+	[_webView reload];
 }
 
 #pragma mark - ContactsSimulatorViewControllerDelegate

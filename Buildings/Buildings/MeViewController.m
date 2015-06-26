@@ -23,6 +23,7 @@
 	if (self) {
 		self.title = @"我的";
 		self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(settings)];
+		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStylePlain target:self action:@selector(reload)];
 	}
 	return self;
 }
@@ -33,17 +34,25 @@
 	_webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
 	_webView.delegate = self;
 	[self.view addSubview:_webView];
-	[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@", WEB_HOST, @"mine/setting_edit.html", PARAMETERS]]]];
+	
+	NSString *path = [NSString stringWithFormat:@"%@%@%@", WEB_HOST, @"tuijian.html", PARAMETERS];
+	[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:path]]];
+	NSLog(@"%@", path);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+
 }
 
 - (void)settings {
 	SettingsViewController *settingsViewController = [[SettingsViewController alloc] initWithNibName:nil bundle:nil];
 	[self.navigationController pushViewController:settingsViewController animated:YES];
+}
+
+- (void)reload {
+	[_webView reload];
 }
 
 #pragma mark - UIWebViewDelegate
